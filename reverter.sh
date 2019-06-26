@@ -7,8 +7,8 @@ REPOSITORIES=(
     'packages/apps/LockClock'
     'packages/apps/Settings'
     'system/core'
-	'vendor/lineage'
-	'device/onyx'
+    'vendor/lineage'
+    'device/oneplus/onyx'
 )
 
 echo Reverting patches from patcher
@@ -20,8 +20,13 @@ for repository in "${REPOSITORIES[@]}"; do
 	echo Aborting am
 	git am --abort
 	git reset --hard
-	echo Checking out remotes/github/lineage-16.0
-	git checkout remotes/github/lineage-16.0
+	if [ -d "${ROOT}/patcher/patches/device/oneplus/onyx" ]; then
+	    echo Checking out branch sultan-camera
+	    git checkout remotes/github/sultan-camera
+	else
+	    echo Checking out branch remotes/github/lineage-16.0
+	    git checkout remotes/github/lineage-16.0
+	fi
 	echo Cleaning up repo
 	git clean -fd
 
