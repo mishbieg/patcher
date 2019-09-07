@@ -2,7 +2,9 @@
 
 ROOT="${PWD}"
 REPOSITORIES=(
+    'bionic'
     'build/make'
+    'external/sqlite'
     'frameworks/av'
     'packages/apps/LockClock'
     'packages/apps/Settings'
@@ -20,12 +22,12 @@ for repository in "${REPOSITORIES[@]}"; do
 	echo Aborting am
 	git am --abort
 	git reset --hard
-	if [ -d "${ROOT}/patcher/patches/device/oneplus/onyx" ]; then
-	    echo Checking out branch sultan-camera
-	    git checkout remotes/github/sultan-camera
+	if [ -d "${ROOT}/patcher/YumeMichi/device/oneplus/onyx" ]; then
+	    echo Checking out branch lineage-16.0
+	    git checkout remotes/github/lineage-16.0
 	else
 	    echo Checking out branch remotes/github/lineage-16.0
-	    git checkout remotes/github/lineage-16.0
+	    git checkout remotes/github/lineage-16.0-sultan
 	fi
 	echo Cleaning up repo
 	git clean -fd

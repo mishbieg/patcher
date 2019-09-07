@@ -2,7 +2,9 @@
 
 ROOT="${PWD}"
 REPOSITORIES=(
+    'bionic'
     'build/make'
+    'external/sqlite'
     'frameworks/av'
     'packages/apps/LockClock'
     'packages/apps/Settings'
@@ -17,8 +19,8 @@ for repository in "${REPOSITORIES[@]}"; do
 
 	echo
 	echo "In directory: $PWD"
-	if [ -d "${ROOT}/patcher/patches/${repository}" ]; then
-		git am --keep-cr ${ROOT}/patcher/patches/${repository}/*.patch
+	if [ -d "${ROOT}/patcher/YumeMichi/${repository}" ]; then
+		git am --keep-cr ${ROOT}/patcher/YumeMichi/${repository}/*.patch
 	fi
 
     cd "${ROOT}"
