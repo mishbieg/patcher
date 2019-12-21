@@ -2,18 +2,19 @@
 
 ROOT="${PWD}"
 REPOSITORIES=(
-    'bionic'
-    'external/sqlite'
-    'frameworks/base'
-    'packages/apps/Gallery2'
-    'packages/apps/Settings'
-    'vendor/aosp'
+    'kernel/oneplus/onyx'
+    'device/oneplus/onyx'
 )
 
+echo Applying patches from patcher
 for repository in "${REPOSITORIES[@]}"; do
     cd "${ROOT}/${repository}"
 
-    git am --keep-cr "${ROOT}/patcher/YumeMichi/${repository}"/*
+	echo
+	echo "In directory: $PWD"
+	if [ -d "${ROOT}/patcher/mishbieg/${repository}" ]; then
+		git am --keep-cr ${ROOT}/patcher/mishbieg/${repository}/*.patch
+	fi
 
     cd "${ROOT}"
 done
