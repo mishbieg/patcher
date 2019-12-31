@@ -1,4 +1,4 @@
-From 3ad0139fc69db1a054041f785608fee7ff5d3bb8 Mon Sep 17 00:00:00 2001
+From 3303fd2f2dbee685ea7b1dfbcb6aec662ea1628e Mon Sep 17 00:00:00 2001
 From: Michael Ortner <lineage@michael-ortner.de>
 Date: Wed, 5 Jun 2019 20:45:37 +0200
 Subject: [PATCH] Sets build id to mishbieg
@@ -9,11 +9,11 @@ Change-Id: Ia7ef407d94180936e7cfa5df0d85d36ddc52cb6b
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/lineage_onyx.mk b/lineage_onyx.mk
-index 9c0b698..a965952 100644
+index 4145e3b..4d284d1 100644
 --- a/lineage_onyx.mk
 +++ b/lineage_onyx.mk
-@@ -47,4 +47,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
- BUILD_FINGERPRINT := OnePlus/OnePlus/OnePlus:6.0.1/MMB29M/10281213:user/release-keys
+@@ -43,4 +43,4 @@ TARGET_VENDOR := oneplus
+ TARGET_VENDOR_PRODUCT_NAME := onyx
  
  # Unofficial build ID
 -TARGET_UNOFFICIAL_BUILD_ID := YumeMichi

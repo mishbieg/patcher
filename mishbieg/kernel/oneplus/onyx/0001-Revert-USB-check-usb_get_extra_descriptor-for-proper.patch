@@ -1,4 +1,4 @@
-From fbb5399eb9ae7164e353d2d3f29745115871e58d Mon Sep 17 00:00:00 2001
+From 2989f8b39094f21db0ca78bc2ace25aa721cfef3 Mon Sep 17 00:00:00 2001
 From: Michael Ortner <lineage@michael-ortner.de>
 Date: Sat, 21 Dec 2019 21:04:42 +0100
 Subject: [PATCH] Revert "USB: check usb_get_extra_descriptor for proper size"
