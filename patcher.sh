@@ -4,6 +4,7 @@ ROOT="${PWD}"
 REPOSITORIES=(
     'kernel/oneplus/onyx'
     'device/oneplus/onyx'
+	'system/sepolicy'
 )
 
 echo Applying patches from patcher
