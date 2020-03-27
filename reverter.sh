@@ -3,7 +3,6 @@
 ROOT="${PWD}"
 REPOSITORIES=(
     'device/oneplus/onyx'
-    'system/sepolicy'
 )
 
 echo Reverting patches from patcher
